@@ -11,30 +11,12 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif; /* Default font */
-            position: relative; /* Make body a positioning context */
         }
         #hello-kitty {
             width: 100%; /* Adjust the size of the image */
             max-width: 600px;
             height: auto;
             margin: 50px auto; /* Center the image vertically and horizontally */
-            position: relative; /* Make hello kitty image a positioning context */
-            z-index: 1; /* Ensure hello kitty is above other elements */
-        }
-        #left-heart, #right-heart {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            height: calc(100% - 140px); /* Adjusted height from top of hello kitty to end of buttons */
-            width: auto;
-            z-index: 0; /* Ensure hearts are behind other elements */
-        }
-        #left-heart {
-            left: 0;
-            transform: scaleX(-1); /* Flip heart horizontally for left side */
-        }
-        #right-heart {
-            right: 0;
         }
         #message {
             font-size: 48px; /* Larger font size */
@@ -107,13 +89,10 @@
 </head>
 <body>
     <img id="hello-kitty" src="hello-kitty-image.gif" alt="Hello Kitty">
-    <img id="left-heart" src="left-heart-image.png" alt="Heart" />
-    <img id="right-heart" src="right-heart-image.png" alt="Heart" />
     <div id="message">
         <p>Happy 3 months!!</p>
         <button id="yes-button" onclick="showPopup()">Click me :3</button>
     </div>
-    <img src="cute.gif" alt="Another Image">
     <div id="popup" class="popup">
         <span class="close-button" onclick="closePopup()">X</span>
         <p class="popup-content">asdas</p>
