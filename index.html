@@ -44,8 +44,8 @@
             background-color: #f7f0f0; /* Cute pastel background color */
             border-radius: 20px; /* Rounded corners */
             padding: 40px; /* Padding inside the popup */
-            width: 100%; /* Width of the popup */
-            max-width: 1400px; /* Maximum width of the popup */
+            width: 60%; /* Width of the popup */
+            max-width: 500px; /* Maximum width of the popup */
             position: fixed; /* Fixed position */
             top: 50%; /* Center vertically */
             left: 50%; /* Center horizontally */
@@ -53,7 +53,8 @@
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
             z-index: 3; /* Ensure popup is above other elements */
             display: none; /* Hide popup by default */
-            overflow-y: auto; /* Enable vertical scrolling if needed */
+            overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+            max-height: 80vh; /* Limit height to 80% of viewport height */
         }
         .close-button {
             position: absolute;
@@ -82,7 +83,7 @@
                 padding: 12px 24px; /* Increased padding for smaller screens */
             }
             .popup {
-                width: 90%; /* Adjusted width for smaller screens */
+                width: 80%; /* Adjusted width for smaller screens */
                 max-width: 100%; /* Ensure popup doesn't exceed viewport width */
             }
         }
@@ -97,7 +98,9 @@
     </div>
     <div id="popup" class="popup">
         <span class="close-button" onclick="closePopup()">X</span>
-        <p class="popup-content">Babyyy I'm so glad that we're together for three whole months now, I really can't believe it. I'm so happy that I've made it this far with you and the fact that its you makes me even more happier. I don't think i could be with anyone for  this long which is why this is so special to me.. You're the best girlfriend I've ever had and I mean that, you know how to take care of me and you know what makes me happy. When I'm feeling sad you always know how to put a smile on my face which no one is ever able to do.. you're like my happy place. Whenever I don't feel good I know I can rely on you to make me feel better and you've made me a much better person because of it. I wouldn't have been able to quit my bad habits like smoking and drinking if it wasn't for you, you're my motivation for all of these things and I strive to become a better person because I want to be a better man for you. Everytime I see your pretty face my heart starts to beat twice as fast and it feels like it's doing front flips which I never really felt before. Everything about your appearance is so beautiful.. your eyes are so mesmerising I wish I could stare into them forever. Your hair looks so gorgeous and so many different colors suit you baby, I always think about playing with your hair and spoiling you with affection 24/7. If there was one thing I could change about this relationship it would be that we weren't so far away from each other because it pains me so much that I have the prettiest, funniest and cutest girl in the world but I don't even get to hold her. Sometimes I think that going through all this long distance stuff is what makes me realise that my love for you is real and it isn't just some silly obsession or lust.. I am willing to wait as long as it takes to be able to finally hold you in my arms and attack you with a billion kisses whenever I feel like it. When we're together we are going to go on so many dates like the beach at night and the aquarium. We'll take pictures of us kissing next to the jellyfish!! When we go to the beach at night we can draw a heart and then our initals inside it. I know you already did that but it has more meaning to me when we both do it together!! I can't wait to live with you when we're older and have proper careers. I'll always put you before me baby and take care of you both mentally and physically. You're the only person I can see myself spending the rest of my life with. If it's not you then its no one. I love you my sweet girl.</p>
+        <div class="popup-content">
+            <p>Babyyy I'm so glad that we're together for three whole months now, I really can't believe it. I'm so happy that I've made it this far with you and the fact that its you makes me even more happier. I don't think i could be with anyone for  this long which is why this is so special to me.. You're the best girlfriend I've ever had and I mean that, you know how to take care of me and you know what makes me happy. When I'm feeling sad you always know how to put a smile on my face which no one is ever able to do.. you're like my happy place. Whenever I don't feel good I know I can rely on you to make me feel better and you've made me a much better person because of it. I wouldn't have been able to quit my bad habits like smoking and drinking if it wasn't for you, you're my motivation for all of these things and I strive to become a better person because I want to be a better man for you. Everytime I see your pretty face my heart starts to beat twice as fast and it feels like it's doing front flips which I never really felt before. Everything about your appearance is so beautiful.. your eyes are so mesmerising I wish I could stare into them forever. Your hair looks so gorgeous and so many different colors suit you baby, I always think about playing with your hair and spoiling you with affection 24/7. If there was one thing I could change about this relationship it would be that we weren't so far away from each other because it pains me so much that I have the prettiest, funniest and cutest girl in the world but I don't even get to hold her. Sometimes I think that going through all this long distance stuff is what makes me realise that my love for you is real and it isn't just some silly obsession or lust.. I am willing to wait as long as it takes to be able to finally hold you in my arms and attack you with a billion kisses whenever I feel like it. When we're together we are going to go on so many dates like the beach at night and the aquarium. We'll take pictures of us kissing next to the jellyfish!! When we go to the beach at night we can draw a heart and then our initals inside it. I know you already did that but it has more meaning to me when we both do it together!! I can't wait to live with you when we're older and have proper careers. I'll always put you before me baby and take care of you both mentally and physically. You're the only person I can see myself spending the rest of my life with. If it's not you then its no one. I love you my sweet girl.</p>
+        </div>
     </div>
     <script>
         const yesButton = document.getElementById("yes-button");
