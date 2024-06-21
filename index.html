@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3 months!!</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffc0cb, #87ceeb); /* Gradient of pink and light blue */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Default font */
+            position: relative; /* Make body a positioning context */
+        }
+        #hello-kitty {
+            width: 100%; /* Adjust the size of the image */
+            max-width: 600px;
+            height: auto;
+            margin: 50px auto; /* Center the image vertically and horizontally */
+            position: relative; /* Make hello kitty image a positioning context */
+            z-index: 1; /* Ensure hello kitty is above other elements */
+        }
+        #left-heart, #right-heart {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: calc(100% - 140px); /* Adjusted height from top of hello kitty to end of buttons */
+            width: auto;
+            z-index: 0; /* Ensure hearts are behind other elements */
+        }
+        #left-heart {
+            left: 0;
+            transform: scaleX(-1); /* Flip heart horizontally for left side */
+        }
+        #right-heart {
+            right: 0;
+        }
+        #message {
+            font-size: 48px; /* Larger font size */
+            margin-bottom: 30px; /* Increased margin */
+            font-family: 'Amatic SC', cursive; /* Cute font for the message */
+            color: #ff66b3; /* Pink text color */
+        }
+        #yes-button {
+            font-size: 32px; /* Larger font size */
+            padding: 15px 30px; /* Increased padding */
+            cursor: pointer;
+            transition: transform 0.5s ease; /* Smooth transition for button movement */
+            font-family: 'Amatic SC', cursive; /* Cute font for the button */
+            background-color: #ffccff; /* Light pink background for button */
+            border: none;
+            border-radius: 30px; /* Rounded corners */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            color: #87ceeb; /* Blue text color */
+        }
+        #yes-button:hover {
+            transform: translateY(-3px); /* Move button slightly up on hover */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+        .popup {
+            background-color: #f7f0f0; /* Cute pastel background color */
+            border-radius: 20px; /* Rounded corners */
+            padding: 40px; /* Padding inside the popup */
+            width: 60%; /* Width of the popup */
+            max-width: 500px; /* Maximum width of the popup */
+            position: fixed; /* Fixed position */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center the popup */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            z-index: 3; /* Ensure popup is above other elements */
+            display: none; /* Hide popup by default */
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #87ceeb; /* Pink text color */
+        }
+        .popup-content {
+            font-family: 'Amatic SC', cursive; /* Use the same font as buttons */
+            font-size: 24px; /* Adjusted font size */
+            color: #87ceeb; /* Pink text color */
+        }
+
+        @media (max-width: 768px) {
+            /* Adjustments for smaller screens */
+            #hello-kitty {
+                width: 80%;
+            }
+            #message {
+                font-size: 36px; /* Larger font size for smaller screens */
+            }
+            #yes-button {
+                font-size: 24px; /* Larger font size for smaller screens */
+                padding: 12px 24px; /* Increased padding for smaller screens */
+            }
+            .popup {
+                width: 80%; /* Adjusted width for smaller screens */
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img id="hello-kitty" src="hello-kitty-image.gif" alt="Hello Kitty">
+    <img id="left-heart" src="left-heart-image.png" alt="Heart" />
+    <img id="right-heart" src="right-heart-image.png" alt="Heart" />
+    <div id="message">
+        <p>Happy 3 months!!</p>
+        <button id="yes-button" onclick="showPopup()">Click me :3</button>
+    </div>
+    <img src="cute.gif" alt="Another Image">
+    <div id="popup" class="popup">
+        <span class="close-button" onclick="closePopup()">X</span>
+        <p class="popup-content">asdas</p>
+    </div>
+    <script>
+        const yesButton = document.getElementById("yes-button");
+        const popup = document.getElementById("popup");
+        const closeButton = document.querySelector(".close-button");
+
+        yesButton.addEventListener("click", function() {
+            popup.style.display = "block";
+        });
+
+        closeButton.addEventListener("click", function() {
+            popup.style.display = "none";
+        });
+    </script>
+</body>
+</html>
